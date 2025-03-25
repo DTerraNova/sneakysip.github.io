@@ -1,0 +1,75 @@
+.pic.active.retake .operations {
+    animation-name: slide-out-operations-retake;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+}
+
+@keyframes slide-out-operations-retake{
+    0%{ transform: translate(0, 0);}
+    100%{ transform: translate(0, 800px)}
+}
+
+
+.pic.active.retake #pic-frame canvas {
+    opacity: 0;
+}
+
+.pic.active.retake .countdown-retake {
+    position: absolute;
+    top: -100vh;
+    width:100%;
+    text-align: center;
+}
+
+.pic.active.retake .countdown-retake h1 {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    font-size: 16em;
+    line-height: 1em;
+    width: 100%;
+    margin: auto;
+    color: var(--white);
+    -webkit-text-stroke: 10px var(--black);
+}
+
+.pic.active.retake .flash-retake {
+    position: absolute;
+    top: -100vh;
+    background-color: var(--white);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.pic.active.retake .countdown-retake h1 {
+    animation-name: count-down;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.pic.active.retake .countdown-retake h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.pic.active.retake .countdown-retake h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.pic.active.retake .countdown-retake h1:nth-child(3) {
+    animation-delay: 3s;
+}
+
+
+.pic.active.retake .flash-retake {
+    animation-name: flash;
+    animation-duration: 500ms;
+    animation-delay: 3.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }

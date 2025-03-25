@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Diogo Terra Nova">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/idle.css">
+    <link rel="stylesheet" href="styles/pic.css">
+    <link rel="stylesheet" href="styles/retake.css">
+    <link rel="stylesheet" href="styles/outboard.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Sneaky Sip - Photobooth</title>
+    
+</head>
+
+<style>
+
+</style>
+<body oncontextmenu="return false;">
+    <main class="main-container">
+        <div class="frame">
+
+        </div>
+        <div class="background-container">
+            <img src="assets/background.svg" alt="background" id="background-lines" class="slide-in">
+        </div>
+        <section class="home">
+            <div class="logo">
+                <img src="assets/title.svg" alt="SneakySip" id="home-title" class="slide-in">
+            </div>
+            <div class="snippy">
+                <img src="assets/snippy.svg" class="slide-in">
+            </div>
+            <div class="snippy finger">
+                <img src="assets/snippy_finger.svg" class="slide-in">
+            </div>
+
+            <div class="cta slide-in">
+                <div class="button flash-scale" id="navigateToCamera">
+                    <div class="face">
+                        <h1>Take a Pic!</h1>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+
+            <div class="footer">
+            </div>
+        </section>
+        <section class="pic">
+            <div class="countdown">
+                <h1>3</h1>
+                <h1>2</h1>
+                <h1>1</h1>
+            </div>
+            <div class="countdown-retake">
+                <h1>3</h1>
+                <h1>2</h1>
+                <h1>1</h1>
+            </div>
+            <div class="flash"></div>
+            <div class="flash-retake"></div>
+            <div class="frame" >
+                <div class="camera-area">
+                    <div class="apperture">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    
+                    <video id="video" height="800" autoplay></video>
+                    <div id="pic-frame">
+                        <div class="stamp-sponsor">
+                            <img src="assets/sponsor_logo.svg" width="200px"/>
+                        </div>
+                        <div class="stamp-logo">
+                            <img src="assets/stamp-snippy.svg" width="200px"/>
+                        </div>
+                        <canvas id="canvas" height="800" width="800"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="snippy">
+              <img src="assets/snippy_cup.svg" class="slide-in"/>  
+            </div>
+
+            <div class="snippy after-pic">
+                <img src="assets/snippy_cup.svg" class="slide-in"/>  
+              </div>
+            <div class="speech-bubble">
+                <img src="assets/speech_bubble.svg" class="slide-in"/>
+                <h2>Say</h2>
+                <h1>Sip!!!</h1>
+            </div>
+            <div class="operations">
+                <div class="button" id="print">
+                    <div class="face">
+                        <h1>Print it!</h1>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+
+                <div class="button" id="tryAgain" >
+                    <div class="face">
+                        <h1>Try Again</h1>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </section>
+        <section class="outboard">
+            <div class="snippy">
+                <img src="assets/snippy_cup.svg" class="slide-in"/> 
+            </div>
+            <div class="speech-bubble">
+                <img src="assets/speech_bubble.svg" class="slide-in"/>
+                <h2>Ask our crew</h2>
+                <h1>For Your Pic</h1>
+            </div>
+
+            <div class="footer">
+                <h1>Enjoy Sneaky Sip</h1>
+            </div>
+        </section>
+        <section class="debug" id="debug" onclick="refresh()">
+            <div class="refresh" ></div>
+        </section>
+    
+    </main>
+    <script src="bower_components/dom-to-image/src/dom-to-image.js"></script>
+    <script src="scripts/debug.js"></script>
+
+    
+</body>
+</html>

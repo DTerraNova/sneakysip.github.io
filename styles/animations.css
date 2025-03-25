@@ -1,0 +1,217 @@
+
+#background-lines.slide-in{
+    animation-name: background-slide-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform: translate(-470vw, -150vh);
+}
+
+@keyframes background-slide-in {
+    100%{ transform: translate(-317vw, 0vh);}
+}
+
+
+#home-title.slide-in{
+    animation-name: slide-in;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: translate(-550px, -550px);
+}
+
+.home .snippy .slide-in {
+    animation-name: slide-in;
+    animation-delay: 2.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: translate(900px, 0);
+}
+
+.home .cta.slide-in {
+    animation-name: slide-in;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 800px);
+}
+
+@keyframes slide-in{
+    100%{ transform: translate(0, 0);}
+}
+
+.home .cta.slide-in .button.flash-scale {
+    animation-name: zoom;
+    animation-delay: 4s;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    transform:scale(1);
+}
+
+@keyframes zoom{
+    0%{ transform:scale(1);}
+    30%{ transform:scale(1);}
+    50%{ transform:scale(1.1);}
+    70%{ transform:scale(1);}
+    100% {transform:scale(1);}
+}
+
+.slide-out{
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 0);
+}
+
+
+#home-title.slide-out{
+    animation-name: home-title-slide-out;
+}
+
+@keyframes home-title-slide-out{
+    100%{ transform: translate(-550px, -550px);}
+}
+
+
+.home .snippy .slide-out {
+    animation-name: snippy-slide-out;
+    animation-duration: 3s;
+}
+
+
+@keyframes snippy-slide-out{
+    100%{ transform: translate(0, 1700px); }
+}
+
+.home .cta.slide-out,
+.home .footer.slide-out {
+    animation-name: cta-slide-out;
+}
+
+@keyframes cta-slide-out{
+    100%{ transform: translate(0, 900px); }
+}
+
+#background-lines.slide-out{
+    animation-name: background-slide-out;
+}
+
+@keyframes background-slide-out {
+    100%{ transform: translate(-470vw, -150vh);}
+}
+
+.active .apperture li:after, .active .apperture li:before {
+    height: 50%;
+    animation: shutter 3s 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes shutter {
+    0% { height: 50%;}
+    25% { height: 40%;}
+    50% { height: 45%;}
+    100% { height: 0%;}
+  }
+
+
+  .pic.active .countdown h1 {
+    animation-name: count-down;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.pic.active .countdown h1:nth-child(1) {
+    animation-delay: 6s;
+}
+
+.pic.active .countdown h1:nth-child(2) {
+    animation-delay: 7s;
+}
+
+.pic.active .countdown h1:nth-child(3) {
+    animation-delay: 8s;
+}
+
+
+@keyframes count-down {
+    0% { transform: scale(1); opacity: 0;}
+    5% { transform: scale(1); opacity: 1;}
+    50% { transform: scale(1.4);}
+    95% { transform: scale(1); opacity: 1;}
+    100% { transform: scale(1); opacity: 0;}
+  }
+
+
+  .pic.active .flash {
+    animation-name: flash;
+    animation-duration: 500ms;
+    animation-delay: 9s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+
+  @keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+
+  .pic.active .snippy {
+    animation-name: slide-in-pic-snippy;
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-in-pic-snippy{
+    0%{ transform: translate(600px, -100px); z-index: 5;}
+    10%{ transform: translate(0, -100px); z-index: 5;}
+    67%{ transform: translate(0, -100px); z-index: 5;}
+    77%{ transform: translate(600px, -100px); z-index: 5;}
+    81%{ transform: translate(600px, -1320px) scale(0.75); z-index: 1;}
+    90%{ transform: translate(100px, -1320px) scale(0.75); z-index: 1;}
+    100%{ transform: translate(100px, -1320px) scale(0.75); z-index: 1;}
+}
+
+.pic.active .speech-bubble {
+    animation-name: slide-in-pic-bubble;
+    animation-delay: 5s;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    transform: translate(-900px, 0);
+}
+
+
+@keyframes slide-in-pic-bubble{
+    10%{ transform: translate(0, 0);}
+    42%{ transform: translate(0, 0);}
+    53%{ transform: translate(-900px, 0); opacity: 1;}
+    54%{ transform: translate(-900px, 0); opacity: 0;}
+    100%{ transform: translate(-900px, 0); opacity: 0;}
+}
+
+.pic.active .operations {
+    animation-name: slide-in;
+    animation-delay: 9s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translate(0, 800px);
+}
+
+.pic.active .operations .button#print {
+    animation-name: zoom;
+    animation-delay: 10s;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    transform:scale(1);
+}
+
+.pic.slide-out{
+    transform: translate(100vw, 0);
+    transition: all 1s;
+} 

@@ -1,0 +1,239 @@
+.pic {
+    position: relative;
+}
+
+.pic .frame {
+    background-color: var(--white);
+    aspect-ratio: 1/1;
+    top: -175vh;
+    border: var(--border) solid var(--black);
+    pointer-events: none;
+    transition: top 2s ease-in-out;
+}
+
+.pic.active .frame {
+    position: absolute;
+    top: -85vh;
+    width: 100%;
+    pointer-events: initial;
+    z-index: 4;
+}
+
+
+.pic .frame .camera-area {
+    background-color: var(--white);
+    width: 80%;
+    aspect-ratio: 1/1;
+    border: var(--border) solid var(--black);
+    margin: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.pic .apperture ul {
+    width: 110vw;
+    aspect-ratio: 1/1;
+    display: block;
+    position: relative;
+    top: -11vh;
+    left: -18vw;
+    border-radius: 100%;
+    background: transparent;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.pic .apperture li {
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin: auto;
+}
+
+.pic .apperture li:after, .apperture li:before {
+  content: '';
+  display: block;
+  width: 9000px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+}
+ 
+.pic .apperture li:after {right: 0; bottom: 0;}
+.pic .apperture li:before {left: 0;top: 0;}
+.pic .apperture li:nth-child(2) { transform: rotate(30deg); }
+.pic .apperture li:nth-child(3) { transform: rotate(60deg); }
+.pic .apperture li:nth-child(4) { transform: rotate(90deg); }
+.pic .apperture li:nth-child(5) { transform: rotate(120deg); } 
+.pic .apperture li:nth-child(6) {transform: rotate(150deg)}
+
+
+.pic.active .snippy {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    right: 0;
+    width: 60vw;
+    transform: translate(900px, 0);
+}
+
+
+.pic.active .speech-bubble {
+    position: absolute;
+    bottom: 16vh;
+    left: 11vw;
+    width: 43vw;
+    z-index: 48;
+}
+
+.pic.active .speech-bubble h2 {
+    font-size: 4em;
+    font-weight: 900;
+    -webkit-text-stroke: 2px var(--black);
+    letter-spacing: 1px;
+    position: absolute;
+    top: 26px;
+    left: 51px;
+}
+
+.pic.active .speech-bubble h1 {
+    font-size: 7em;
+    font-weight: 900;
+    -webkit-text-stroke: 0px var(--black);
+    letter-spacing: 5px;
+    position: absolute;
+    top: 80px;
+    left: 45px;
+}
+
+.pic.active .camera-area video {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    transform: scaleX(-1);
+}
+
+.pic.active .countdown {
+    position: absolute;
+    top: -100vh;
+    width:100%;
+    text-align: center;
+}
+
+.pic.active .countdown h1 {
+    position: absolute;
+    top: 0;
+    font-size: 16em;
+    line-height: 1em;
+    width: 100%;
+    margin: auto;
+    color: var(--white);
+    -webkit-text-stroke: 10px var(--black);
+}
+
+.pic.active .flash {
+    position: absolute;
+    top: -100vh;
+    background-color: var(--white);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.pic.active #pic-frame {
+    position: absolute;
+    top: -1px;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+
+.pic.active #pic-frame canvas {
+    left: 0;
+    position: absolute;
+    transform: scaleX(-1);
+}
+
+.pic.active #pic-frame .stamp-sponsor {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    z-index: 2;
+}
+
+.pic.active #pic-frame .stamp-logo {
+    position: absolute;
+    bottom: -3px;
+    left: -4px;
+    z-index: 2;
+}
+
+.pic.active .operations {
+    align-items: center;
+    position: absolute;
+    bottom: 14em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9;
+}
+
+.pic.active .operations .button .face {
+    background-color: var(--white);
+    width: 70vw;
+    text-align: center;
+    border:1.5vw solid var(--black);
+    padding: 1vh 8vw;
+    font-size: 4em;
+    font-weight: 900;
+    -webkit-text-stroke: 5px var(--black);
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.pic.active .operations .button#tryAgain {
+    transform: scale(0.7);
+}
+
+
+.pic.active .operations .button .shadow {
+    background-color: var(--black);
+    height: 10vh;
+    margin-top: -8vh;
+    margin-left: 2vw;
+    width: 70vw;
+    position: relative;
+    z-index: 1;
+}
+
+.pic.active .operations .button .shadow::after {
+    height: 2em;
+    width: 2.5em;
+    content: ' ';
+    position: absolute;
+    transform: rotate(58deg);
+    top: -23px;
+    right: 4px;
+    background-color: var(--black);
+}
+
+.pic.active .operations .button .shadow::before {
+    height: 2.5vh;
+    width: 2.5vh;
+    content: ' ';
+    position: absolute;
+    transform: rotate(61deg);
+    bottom: 8px;
+    left: -14px;
+    background-color: var(--black);
+}
+

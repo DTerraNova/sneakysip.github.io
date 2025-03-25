@@ -1,0 +1,62 @@
+:root {
+    --background: #4EE6BE;
+    --black: #000000;
+    --white: #fff;
+    --debug: red;
+    --border: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alegreya Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+img {display: block;}
+
+html {
+    background: var(--background);
+}
+
+.debug {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.debug .refresh {height: 4em; width: 4em;}
+
+
+body { height: 100vh; width: 100vw; overflow: hidden;}
+
+
+body > .main-container {
+    height:1920px;
+    width: 1080px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+body > .main-container > .frame {
+    position: absolute;
+    border: var(--border) solid var(--black);
+    border-bottom: 40px solid black;
+    height: 100%;
+    width: 100%;
+    z-index: 11;
+    pointer-events: none;
+}
+
+.main-container .background-container{
+    height: 100%;
+    width: 100%;
+}
+
+#background-lines {
+    height: 2131.2px;
+}
+

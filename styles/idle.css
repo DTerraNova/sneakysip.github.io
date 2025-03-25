@@ -1,0 +1,86 @@
+.home {
+    position: absolute;
+    top: 0;
+}
+
+.home .logo img {
+    width: 756px; /* 70vw -> 70% de 1080px */
+    position: absolute;
+    top: 64px; /* 4em -> 4 * 16px */
+    left: 64px; /* 4em -> 4 * 16px */
+}
+
+.home .snippy {
+    position: absolute;
+    width: 1248px; /* 65vh -> 65% de 1920px */
+    top: 480px; /* 25vh -> 25% de 1920px */
+    left: 57.6px; /* 3vh -> 3% de 1920px */
+    pointer-events: none;
+}
+
+.home .snippy.finger {
+    z-index: 9;
+}
+
+.home .cta {
+    position: absolute;
+    top: 1555.2px; /* 81vh -> 81% de 1920px */
+    width: 1080px; /* 100vw -> 100% de 1080px */
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.home .cta .button .face {
+    background-color: var(--white);
+    width: 756px; /* 70vw -> 70% de 1080px */
+    text-align: center;
+    border: 16.2px solid var(--black); /* 1.5vw -> 1.5% de 1080px */
+    padding: 19.2px 86.4px; /* 1vh 8vw -> 1% de 1920px, 8% de 1080px */
+    font-size: 64px; /* 4em -> 4 * 16px */
+    font-weight: 900;
+    -webkit-text-stroke: 5px var(--black);
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.home .cta .button .shadow {
+    background-color: var(--black);
+    height: 192px; /* 10vh -> 10% de 1920px */
+    margin-top: -153.6px; /* -8vh -> -8% de 1920px */
+    margin-left: 21.6px; /* 2vw -> 2% de 1080px */
+    width: 756px; /* 70vw -> 70% de 1080px */
+    position: relative;
+    z-index: 1;
+}
+
+.home .cta .button .shadow::after {
+    height: 32px; /* 2em -> 2 * 16px */
+    width: 40px; /* 2.5em -> 2.5 * 16px */
+    content: ' ';
+    position: absolute;
+    transform: rotate(58deg);
+    top: -23px;
+    right: 4px;
+    background-color: var(--black);
+}
+
+.home .cta .button .shadow::before {
+    height: 48px; /* 2.5vh -> 2.5% de 1920px */
+    width: 48px; /* 2.5vh -> 2.5% de 1920px */
+    content: ' ';
+    position: absolute;
+    transform: rotate(61deg);
+    bottom: 8px;
+    left: -14px;
+    background-color: var(--black);
+}
+
+.home .footer {
+    background-color: var(--black);
+    position: absolute;
+    top: 1632px; /* 85vh -> 85% de 1920px */
+    width: 1080px; /* 100vw -> 100% de 1080px */
+    height: 288px; /* 15vh -> 15% de 1920px */
+}
