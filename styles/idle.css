@@ -37,7 +37,7 @@
     text-align: center;
     border: 16.2px solid var(--black); /* 1.5vw -> 1.5% de 1080px */
     padding: 19.2px 86.4px; /* 1vh 8vw -> 1% de 1920px, 8% de 1080px */
-    font-size: 64px; /* 4em -> 4 * 16px */
+    font-size: 50px !important; /* 4em -> 4 * 16px */
     font-weight: 900;
     -webkit-text-stroke: 5px var(--black);
     letter-spacing: 5px;
